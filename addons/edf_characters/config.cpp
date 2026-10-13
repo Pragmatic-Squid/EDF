@@ -7,6 +7,9 @@
 #define protected   1
 #define public      2
 
+#define DefaultEquip Throw,Put
+#define DefaultGrenades HandGrenade,HandGrenade,SmokeShell
+
 // ---------------------------------------------------------------------------
 // CfgPatches
 // ---------------------------------------------------------------------------
@@ -17,11 +20,12 @@ class CfgPatches
     {
         units[] =
         {
-            "EDF_SoldierB",
-			"EDF_SoldierMedic",
-			"EDF_SoldierG",
-			"EDF_SoldierAR",
-			"EDF_SoldierBKobra"
+            "EDF_TD_SoldierB",
+			"EDF_TD_SoldierMedic",
+			"EDF_TD_SoldierG",
+			"EDF_TD_SoldierAR",
+			"EDF_TD_SoldierAT",
+			"EDF_TD_TeamLeader"
         };
 
         weapons[] = {};
@@ -95,8 +99,7 @@ class CfgVehicles
 		
         weapons[] = {
             "AK74",
-            "Throw",
-            "Put"
+            DefaultEquip
         };
 
         magazines[] = {
@@ -107,14 +110,14 @@ class CfgVehicles
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
-			"30Rnd_545x39_AK"
+			"30Rnd_545x39_AK",
+			DefaultGrenades
         };
 		
 		respawnWeapons[] = {
             "AK74",
-            "Throw",
-            "Put"
-        };
+            DefaultEquip
+		};
 		
 		respawnMagazines[] = {
 			"30Rnd_545x39_AK",
@@ -147,8 +150,7 @@ class CfgVehicles
 		
 		weapons[] = {
 			"AK74GL",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		magazines[] = {
@@ -166,6 +168,22 @@ class CfgVehicles
 			"1Rnd_HE_GP25",
 			"1Rnd_HE_GP25",
 			"1Rnd_HE_GP25",
+			"1Rnd_HE_GP25",
+			"1Rnd_HE_GP25",
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {
+            "AK74GL",
+            DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
 			"1Rnd_HE_GP25",
 			"1Rnd_HE_GP25"
 		};
@@ -208,8 +226,7 @@ class CfgVehicles
 		
 		weapons[] = {
 			"PK",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		magazines[] = {
@@ -223,8 +240,7 @@ class CfgVehicles
 		
 		respawnWeapons[] = {
 			"PK",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
@@ -259,8 +275,7 @@ class CfgVehicles
 		weapons[] = {
 			"AK74",
 			"RPG7V",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		magazines[] = {
@@ -270,14 +285,14 @@ class CfgVehicles
 			"30Rnd_545x39_AK",
 			"PG7V",
 			"PG7V",
-			"PG7V"
+			"PG7V",
+			DefaultGrenades
 		};
 		
 		respawnWeapons[] = {
 			"AK74",
 			"RPG7V",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
@@ -301,8 +316,7 @@ class CfgVehicles
 			"AK74",
 			"Binocular",
 			"NVGoggles",
-			"Throw",
-			"Put"
+			DefaultEquip
 		};
 		
 		magazines[] = {
@@ -312,17 +326,197 @@ class CfgVehicles
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
-			"HandGrenade",
-			"HandGrenade",
-			"HandGrenade"
+			DefaultGrenades
 		};
 		
 		respawnWeapons[] = {
 			"AK74",
 			"Binocular",
 			"NVGoggles",
-			"Throw",
-			"Put"
+			DefaultEquip 
 		};
 	};
+	
+	class EDF_TD_Sniper : EDF_TD_SoldierB {
+		displayName = "EDF Sniper";
+		nameSound="sniper";
+		
+		Picture = "\Ca\characters\data\Ico\i_SF_CA.paa";
+		Icon = "\Ca\characters\data\map_ico\i_wojak_CA.paa";
+		
+		accuracy = 3.5;
+		nightVision = true;
+		cost = 250000;
+		sensitivity = 2;
+		camouflage = 0.6;
+		threat[] = {1, 0.1, 0.1};
+		
+		weapons[] = {
+			"SVD",
+			"Makarov",
+			"Binocular",
+			DefaultEquip
+		};
+			
+		magazines[] = {
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov"
+		};
+		
+		respawnWeapons[]={
+			"SVD",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD"
+		};
+	};
+	
+	class EDF_TD_Marksman : EDF_TD_SoldierB
+	{
+		displayName = "EDF Marksman";
+		
+		weapons[] = {
+			"aks74pso",
+			"MakarovSD",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		magazines[] =
+		{
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {"
+		"aks74pso",
+		DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK"
+		};
+	};
+	
+	class EDF_TD_SoldierCrew: EDF_TD_SoldierB
+	{
+		displayName = "EDF Crew";
+		nameSound = "crew";
+		
+		picture = "\Ca\characters\data\Ico\i_null_CA.paa";
+		Icon = "\Ca\characters\data\map_ico\i_wojak_CA.paa";
+		
+		accuracy = 1000; // never recognize
+		
+
+		weapons[] = {
+			"AKS74U",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"30Rnd_545x39_AK",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
+		};
+		
+		respawnWeapons[] = {
+			"Makarov",DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov"
+		};
+};
+
+class CfgGroups {
+    class West {
+        name = "BLUFOR";
+
+        class EDF_TD {
+            name = "EDF Territorial Defense";
+
+            class EDF_TD_RifleSquad {
+                name = "TD RifleSquad";
+
+				class Unit0 {
+					side = 1;
+					vehicle = "EDF_TD_TeamLeader";
+					rank = "SERGEANT";
+					position[] = {0, 0, 0};
+				};
+
+				class Unit1 {
+					side = 1;
+					vehicle = "EDF_TD_SoldierB";
+					rank = "PRIVATE";
+					position[] = {5, -5, 0};
+				};
+
+				class Unit2 {
+					side = 1;
+					vehicle = "EDF_TD_SoldierG";
+					rank = "PRIVATE";
+					position[] = {-5, -5, 0};
+				};
+
+				class Unit3 {
+					side = 1;
+					vehicle = "EDF_TD_SoldierAR";
+					rank = "CORPORAL";
+					position[] = {10, -10, 0};
+				};
+
+				class Unit4 {
+					side = 1;
+					vehicle = "EDF_TD_SoldierB";
+					rank = "PRIVATE";
+					position[] = {-10, -10, 0};
+				};
+
+				class Unit5 {
+					side = 1;
+					vehicle = "EDF_TD_SoldierAT";
+					rank = "PRIVATE";
+					position[] = {15, -15, 0};
+				};
+            };
+        };
+    };
 };
