@@ -25,7 +25,10 @@ class CfgPatches
 			"EDF_TD_SoldierG",
 			"EDF_TD_SoldierAR",
 			"EDF_TD_SoldierAT",
-			"EDF_TD_TeamLeader"
+			"EDF_TD_TeamLeader",
+			"EDF_TD_SoldierCrew",
+			"EDF_TD_Sniper",
+			"EDF_TD_Marksman"
         };
 
         weapons[] = {};
@@ -395,8 +398,7 @@ class CfgVehicles
 			DefaultEquip
 		};
 		
-		magazines[] =
-		{
+		magazines[] = {
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
 			"30Rnd_545x39_AK",
@@ -410,7 +412,7 @@ class CfgVehicles
 			DefaultGrenades
 		};
 		
-		respawnWeapons[] = {"
+		respawnWeapons[] = {
 		"aks74pso",
 		DefaultEquip
 		};
