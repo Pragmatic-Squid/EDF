@@ -17,6 +17,16 @@
 	"30Rnd_545x39_AK", \
 	"30Rnd_545x39_AK", \
 	"30Rnd_545x39_AK", \
+	
+#define GP25_GRENADES_8 \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25", \
+	"1Rnd_HE_GP25"
 
 // ---------------------------------------------------------------------------
 // CfgPatches
@@ -505,6 +515,37 @@ class CfgVehicles
 		};
     };
 	
+	class EDF_RF_SoldierG : EDF_RF_SoldierB {
+		displayName = "EDF RF Grenadier";
+		nameSound = "grenadier";
+		
+		model = "edf_characters\edf_rf_soldier_g.p3d"
+		
+		cost=60000;
+		accuracy = 1000; // never recognized
+		
+		weapons[] = {
+			"AK74GL",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			AK_MAGAZINES_6,
+			GP25_GRENADES_8,
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {
+            "AK74GL",
+            DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			AK_MAGAZINES_6,
+			"1Rnd_HE_GP25",
+			"1Rnd_HE_GP25"
+		};	
+	};
 };
 
 class CfgGroups {
