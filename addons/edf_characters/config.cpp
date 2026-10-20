@@ -46,7 +46,9 @@ class CfgPatches
 			"EDF_TDF_TeamLeader",
 			"EDF_TDF_SoldierCrew",
 			"EDF_TDF_Sniper",
-			"EDF_TDF_Marksman"
+			"EDF_TDF_Marksman",
+			"EDF_RF_SoldierB",
+			"EDF_RF_SoldierG"
         };
 
         weapons[] = {};
@@ -161,7 +163,7 @@ class CfgVehicles
 		displayName = "EDF TDF Grenadier";
 		nameSound = "grenadier";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier_g.p3d";
 		
 		cost=60000;
 		accuracy = 1000; // never recognized
@@ -173,14 +175,7 @@ class CfgVehicles
 		
 		magazines[] = {
 			AK_MAGAZINES_6,
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25",
+			GP25_GRENADES_8,
 			DefaultGrenades
 		};
 		
@@ -228,7 +223,7 @@ class CfgVehicles
 		displayName = "EDF TDF Automatic Rifleman";
 		nameSound = "machineGunner";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy = 1.5;
 		cost = 60000;
@@ -277,7 +272,7 @@ class CfgVehicles
 		displayName = "EDF TDF AT Soldier";
 		nameSound = "missileSoldier";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy=1.5;
 		cost=150000;
@@ -317,7 +312,7 @@ class CfgVehicles
 		
 		Picture= "\Ca\characters\data\Ico\i_tleader_CA.paa";
 		Icon= "\Ca\characters\data\map_ico\i_lider_CA.paa";
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy=2.0;
 		cost=600000;
@@ -344,7 +339,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			AK_MAGAZINES_6
-		}
+		};
 	};
 	
 	class EDF_TDF_Sniper : EDF_TDF_SoldierB {
@@ -353,7 +348,7 @@ class CfgVehicles
 		
 		Picture = "\Ca\characters\data\Ico\i_SF_CA.paa";
 		Icon = "\Ca\characters\data\map_ico\i_wojak_CA.paa";
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy = 3.5;
 		nightVision = true;
@@ -399,7 +394,7 @@ class CfgVehicles
 	{
 		displayName = "EDF TDF Marksman";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		weapons[] = {
 			"aks74pso",
@@ -418,8 +413,8 @@ class CfgVehicles
 		};
 		
 		respawnWeapons[] = {
-		"aks74pso",
-		DefaultEquip
+			"aks74pso",
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
@@ -427,12 +422,11 @@ class CfgVehicles
 		};
 	};
 	
-	class EDF_TDF_SoldierCrew: EDF_TDF_SoldierB
-	{
+	class EDF_TDF_SoldierCrew : EDF_TDF_SoldierB {
 		displayName = "EDF TDF Crew";
 		nameSound = "crew";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d"
+		model = "edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy = 1000; // never recognize
 		
@@ -464,6 +458,7 @@ class CfgVehicles
 			"8Rnd_9x18_Makarov",
 			"8Rnd_9x18_Makarov"
 		};
+	}
 		
     // -----------------------------------------------------------------------
     // Regular Forces
@@ -519,7 +514,7 @@ class CfgVehicles
 		displayName = "EDF RF Grenadier";
 		nameSound = "grenadier";
 		
-		model = "edf_characters\edf_rf_soldier_g.p3d"
+		model = "edf_characters\edf_rf_soldier_g.p3d";
 		
 		cost=60000;
 		accuracy = 1000; // never recognized
