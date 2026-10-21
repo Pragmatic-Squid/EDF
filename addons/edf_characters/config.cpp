@@ -275,7 +275,7 @@ class CfgVehicles
 		displayName = "EDF TDF AT Soldier";
 		nameSound = "missileSoldier";
 		
-		model = "\edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier_at.p3d";
 		
 		accuracy=1.5;
 		cost=150000;
