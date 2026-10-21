@@ -7,8 +7,10 @@
 #define protected   1
 #define public      2
 
-#define DefaultEquip Throw,Put
-#define DefaultGrenades HandGrenade,HandGrenade,SmokeShell
+#define DefaultEquip "Throw","Put"
+#define DefaultGrenades "HandGrenade", \
+	"HandGrenade", \
+	"SmokeShell"
 
 #define AK_MAGAZINES_6 \
 	"30Rnd_545x39_AK", \
@@ -16,7 +18,7 @@
 	"30Rnd_545x39_AK", \
 	"30Rnd_545x39_AK", \
 	"30Rnd_545x39_AK", \
-	"30Rnd_545x39_AK", \
+	"30Rnd_545x39_AK"
 	
 #define GP25_GRENADES_8 \
 	"1Rnd_HE_GP25", \
@@ -104,7 +106,7 @@ class CfgVehicles
 
 	class EDF_SoldierB : SoldierWB
     {
-		scope = public;
+		scope = protected;
 		side = West;
 		faction = "EDF";
     };
@@ -115,6 +117,7 @@ class CfgVehicles
 
     class EDF_TDF_SoldierB : EDF_SoldierB
     {
+		scope = public
 		vehicleClass = "EDF_TerritorialDefenseForces";
 		displayName = "EDF TDF Rifleman";
         
@@ -163,7 +166,7 @@ class CfgVehicles
 		displayName = "EDF TDF Grenadier";
 		nameSound = "grenadier";
 		
-		model = "edf_characters\edf_tdf_soldier_g.p3d";
+		model = "\edf_characters\edf_tdf_soldier_g.p3d";
 		
 		cost=60000;
 		accuracy = 1000; // never recognized
@@ -223,7 +226,7 @@ class CfgVehicles
 		displayName = "EDF TDF Automatic Rifleman";
 		nameSound = "machineGunner";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier_ar.p3d";
 		
 		accuracy = 1.5;
 		cost = 60000;
@@ -272,7 +275,7 @@ class CfgVehicles
 		displayName = "EDF TDF AT Soldier";
 		nameSound = "missileSoldier";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy=1.5;
 		cost=150000;
@@ -312,7 +315,7 @@ class CfgVehicles
 		
 		Picture= "\Ca\characters\data\Ico\i_tleader_CA.paa";
 		Icon= "\Ca\characters\data\map_ico\i_lider_CA.paa";
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy=2.0;
 		cost=600000;
@@ -348,7 +351,7 @@ class CfgVehicles
 		
 		Picture = "\Ca\characters\data\Ico\i_SF_CA.paa";
 		Icon = "\Ca\characters\data\map_ico\i_wojak_CA.paa";
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy = 3.5;
 		nightVision = true;
@@ -394,7 +397,7 @@ class CfgVehicles
 	{
 		displayName = "EDF TDF Marksman";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
 		weapons[] = {
 			"aks74pso",
@@ -426,7 +429,7 @@ class CfgVehicles
 		displayName = "EDF TDF Crew";
 		nameSound = "crew";
 		
-		model = "edf_characters\edf_tdf_soldier.p3d";
+		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
 		accuracy = 1000; // never recognize
 		
@@ -458,7 +461,7 @@ class CfgVehicles
 			"8Rnd_9x18_Makarov",
 			"8Rnd_9x18_Makarov"
 		};
-	}
+	};
 		
     // -----------------------------------------------------------------------
     // Regular Forces
@@ -514,7 +517,7 @@ class CfgVehicles
 		displayName = "EDF RF Grenadier";
 		nameSound = "grenadier";
 		
-		model = "edf_characters\edf_rf_soldier_g.p3d";
+		model = "\edf_characters\edf_rf_soldier_g.p3d";
 		
 		cost=60000;
 		accuracy = 1000; // never recognized
