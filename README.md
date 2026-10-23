@@ -1,18 +1,26 @@
-# Everon Defense Force
+# Armed Forces of Nogova
 
 ## Overview
 
-This project aims to introduce a new faction to ArmA: Armed Assault: the Everon Defense Force, or EDF for short.
+This project aims to introduce a new faction to ArmA: Armed Assault: the Armed Forces of Nogova, or AFN for short.
+
+## Project Status
+
+This project is still in a very early stage of development and is subject to significant changes.
+
+Originally, the mod was intended to introduce the Everon Defense Force (EDF). However, after some consideration, I decided that Nogova would be a better setting for the Eastern European-inspired military I have in mind.
+
+Most assets still carry the EDF naming convention and will be renamed gradually as development progresses.
 
 ## Features
 
-The EDF will feature:
+The AFN will feature:
 
-- Three military branches:
+- Three distinct military components:
   - Territorial Defense Forces (TDF): Consisting primarily of reservists.
-  - Regular Forces (RF): A modernized branch equipped with more advanced weapons and gear, with a preference for Western equipment.
+  - Regular Forces (RF): A modernized force equipped with more advanced weapons and gear, with a preference for Western equipment.
   - Special Operations Forces (SOF): Specializing in special operations (duh), equipped with the most advanced gear and relying heavily on Western weapons.
-- Each branch will have its own camouflage pattern and equipment.
+- Each component will have its own camouflage pattern and equipment.
 
 The mod is being developed for vanilla ArmA: Armed Assault, with ACE compatibility planned for a later stage.
 
@@ -26,14 +34,14 @@ The mod is being developed for vanilla ArmA: Armed Assault, with ACE compatibili
 
 Equipment concept:
 - Uniform with a unique camouflage pattern
-- Helmets, vests and pouches in ranger green
+- Helmets, vests, and pouches in Ranger Green
 - Rifle: AK-74
 - Crew rifle: AKS-74U
 - Machine gun: PK
 - Marksman rifle: AKS-74 + PSO-1
 - Sniper rifle: SVD
 
-Done:
+Completed:
 - Camouflage texture
 - Units with their own models:
   - Rifleman
@@ -49,15 +57,15 @@ Done:
 **Regular Forces**
 
 Equipment concept:
-- Uniforms, helmets and vests with a unique camouflage pattern
-- Pouches in ranger green
+- Uniforms, helmets, and vests with a unique camouflage pattern
+- Pouches in Ranger Green
 - Rifle: AK-74
 - Crew rifle: AKS-74U
 - Machine gun: M249
 - Marksman rifle: M16 + ACOG
 - Sniper rifle: SVD
 
-Done:
+Completed:
 - Camouflage texture
 - Units with their own models:
   - Rifleman
@@ -65,8 +73,8 @@ Done:
 **Special Operations Forces**
 
 Equipment concept:
-- Uniforms, helmets and vests with a unique camouflage pattern
-- Pouches in ranger green
+- Uniforms, helmets, and vests with a unique camouflage pattern
+- Pouches in Ranger Green
 - Camouflaged weapons
 - Rifle: M4A1 + Aimpoint
 - Crew rifle: M4A1
@@ -77,14 +85,11 @@ Equipment concept:
 ### The Road Ahead
 
 **Core**
-- Unique, fully textured models for all unit classes across all branches
-- Custom EDF face classes
+- Unique, fully textured models for all unit classes across all components
+- Custom AFN face classes
 
 **Core Extensions**
-- AK models with CQB optics
-- AK-74M for TDF
-- AK-101 for RF
-- HK416 for SOF
+- AK models equipped with CQB optics
 
 **ACE Addon**
 - Compatibility with ACE systems
