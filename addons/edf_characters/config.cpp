@@ -10,17 +10,17 @@ class CfgPatches
     {
         units[] =
         {
-            "AFN_TDF_SoldierB",
-			"AFN_TDF_SoldierMedic",
-			"AFN_TDF_SoldierG",
-			"AFN_TDF_SoldierAR",
-			"AFN_TDF_SoldierAT",
+            "AFN_TDF_Rifleman",
+			"AFN_TDF_Medic",
+			"AFN_TDF_Grenadier",
+			"AFN_TDF_AutomaticRifleman",
+			"AFN_TDF_AntiTank",
 			"AFN_TDF_TeamLeader",
-			"AFN_TDF_SoldierCrew",
+			"AFN_TDF_Crewman",
 			"AFN_TDF_Sniper",
 			"AFN_TDF_Marksman",
-			"AFN_LF_SoldierB",
-			"AFN_LF_SoldierG"
+			"AFN_LF_Rifleman",
+			"AFN_LF_Grenadier"
         };
 
         weapons[] = {};
@@ -74,7 +74,7 @@ class CfgVehicles
 {
     class SoldierWB;
 
-	class AFN_SoldierB : SoldierWB
+	class AFN_SoldierBase : SoldierWB
     {
 		scope = protected;
 		side = West;
@@ -85,7 +85,7 @@ class CfgVehicles
     // Territorial Defense Forces
     // -----------------------------------------------------------------------
 
-    class AFN_TDF_SoldierB : AFN_SoldierB
+    class AFN_TDF_Rifleman : AFN_SoldierBase
     {
 		scope = public;
 		vehicleClass = "AFN_TerritorialDefenseForces";
@@ -133,7 +133,7 @@ class CfgVehicles
 		};
     };
 	
-	class AFN_TDF_SoldierG : AFN_TDF_SoldierB {
+	class AFN_TDF_Grenadier : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Grenadier";
 		nameSound = "grenadier";
 		
@@ -165,7 +165,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_SoldierMedic : AFN_TDF_SoldierB {
+	class AFN_TDF_Medic : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Medic";
 		nameSound = "medic2";
 		
@@ -192,7 +192,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_SoldierAR: AFN_TDF_SoldierB
+	class AFN_TDF_AutomaticRifleman: AFN_TDF_Rifleman
 	{
 		displayName = "AFN TDF Automatic Rifleman";
 		nameSound = "machineGunner";
@@ -237,7 +237,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_SoldierAT: AFN_TDF_SoldierB
+	class AFN_TDF_AntiTank: AFN_TDF_Rifleman
 	{
 		displayName = "AFN TDF AT Soldier";
 		nameSound = "missileSoldier";
@@ -274,7 +274,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_TeamLeader : AFN_TDF_SoldierB {
+	class AFN_TDF_TeamLeader : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Team Leader";
 		
 		Picture= "\Ca\characters\data\Ico\i_tleader_CA.paa";
@@ -310,7 +310,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_Sniper : AFN_TDF_SoldierB {
+	class AFN_TDF_Sniper : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Sniper";
 		nameSound="sniper";
 		
@@ -350,7 +350,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_Marksman : AFN_TDF_SoldierB
+	class AFN_TDF_Marksman : AFN_TDF_Rifleman
 	{
 		displayName = "AFN TDF Marksman";
 		
@@ -383,7 +383,7 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_SoldierCrew : AFN_TDF_SoldierB {
+	class AFN_TDF_Crewman : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Crew";
 		nameSound = "crew";
 		
@@ -423,7 +423,7 @@ class CfgVehicles
     // Land Forces
     // -----------------------------------------------------------------------
 	
-	 class AFN_LF_SoldierB : AFN_SoldierB
+	 class AFN_LF_Rifleman : AFN_SoldierBase
     {
 		vehicleClass = "AFN_LandForces";
 		displayName = "AFN LF Rifleman";
@@ -470,7 +470,7 @@ class CfgVehicles
 		};
     };
 	
-	class AFN_LF_SoldierG : AFN_LF_SoldierB {
+	class AFN_LF_Grenadier : AFN_LF_Rifleman {
 		displayName = "AFN LF Grenadier";
 		nameSound = "grenadier";
 		
@@ -522,35 +522,35 @@ class CfgGroups {
 
 				class Unit1 {
 					side = 1;
-					vehicle = "AFN_TDF_SoldierB";
+					vehicle = "AFN_TDF_Rifleman";
 					rank = "PRIVATE";
 					position[] = {5, -5, 0};
 				};
 
 				class Unit2 {
 					side = 1;
-					vehicle = "AFN_TDF_SoldierG";
+					vehicle = "AFN_TDF_Grenadier";
 					rank = "PRIVATE";
 					position[] = {-5, -5, 0};
 				};
 
 				class Unit3 {
 					side = 1;
-					vehicle = "AFN_TDF_SoldierAR";
+					vehicle = "AFN_TDF_AutomaticRifleman";
 					rank = "CORPORAL";
 					position[] = {10, -10, 0};
 				};
 
 				class Unit4 {
 					side = 1;
-					vehicle = "AFN_TDF_SoldierB";
+					vehicle = "AFN_TDF_Rifleman";
 					rank = "PRIVATE";
 					position[] = {-10, -10, 0};
 				};
 
 				class Unit5 {
 					side = 1;
-					vehicle = "AFN_TDF_SoldierAT";
+					vehicle = "AFN_TDF_AntiTank";
 					rank = "PRIVATE";
 					position[] = {15, -15, 0};
 				};
