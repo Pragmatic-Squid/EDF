@@ -820,22 +820,22 @@ class CfgVehicles
         cost = 40000;
 
         weapons[] = {
-            "AK74",
+            "M4AIM",
             DefaultEquip
         };
 
         magazines[] = {
-            AK_MAGAZINES_6,
+            M4AIM_MAGAZINES_6,
             TDF_DEFAULT_GRENADES
         };
 
         respawnWeapons[] = {
-            "AK74",
+            "M4AIM",
             DefaultEquip
         };
 
         respawnMagazines[] = {
-            AK_MAGAZINES_6,
+            M4AIM_MAGAZINES_6,
             TDF_DEFAULT_GRENADES
         };
 
