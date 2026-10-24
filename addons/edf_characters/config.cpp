@@ -19,6 +19,7 @@ class CfgPatches
 			"AFN_TDF_Crewman",
 			"AFN_TDF_Sniper",
 			"AFN_TDF_Marksman",
+            "AFN_TDF_Marksman_SVD",
 			"AFN_LF_Rifleman",
 			"AFN_LF_Grenadier",
             "AFN_LF_Medic",
@@ -27,6 +28,7 @@ class CfgPatches
             "AFN_LF_TeamLeader",
             "AFN_LF_Sniper",
             "AFN_LF_Marksman",
+            "AFN_LF_Marksman_SVD",
             "AFN_LF_Crewman"
         };
 
@@ -390,7 +392,36 @@ class CfgVehicles
 		};
 	};
 	
-	class AFN_TDF_Crewman : AFN_TDF_Rifleman {
+		class AFN_TDF_Marksman_SVD : AFN_TDF_Marksman
+	{
+		displayName = "AFN TDF Marksman (SVD)";
+
+		weapons[] = {
+			"SVD",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+
+		magazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+
+		respawnWeapons[] = {
+			"SVD",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+
+		respawnMagazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+	};
+
+class AFN_TDF_Crewman : AFN_TDF_Rifleman {
 		displayName = "AFN TDF Crew";
 		nameSound = "crew";
 		
@@ -703,7 +734,36 @@ class CfgVehicles
 		};
 	};
 
-    class AFN_LF_Crewman : AFN_LF_Rifleman {
+    	class AFN_LF_Marksman_SVD : AFN_LF_Marksman
+	{
+		displayName = "AFN LF Marksman (SVD)";
+
+		weapons[] = {
+			"SVD",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+
+		magazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+
+		respawnWeapons[] = {
+			"SVD",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+
+		respawnMagazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+	};
+
+class AFN_LF_Crewman : AFN_LF_Rifleman {
 		displayName = "AFN LF Crew";
 		nameSound = "crew";
 		
