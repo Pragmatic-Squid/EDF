@@ -113,7 +113,7 @@ class CfgVehicles
 
         magazines[] = {
             AK_MAGAZINES_6,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
         };
 		
 		respawnWeapons[] = {
@@ -123,7 +123,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
             AK_MAGAZINES_6,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
         };
 		
 		class Wounds
@@ -157,7 +157,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			GP25_GRENADES_8,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -168,7 +168,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			GP25_GRENADES_8,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 	};
 	
@@ -217,7 +217,7 @@ class CfgVehicles
 		
 		magazines[] = {
 			PK_MAGAZINES_4,
-			HAND_GRENADES_TIMED_2
+			HANDGRENADE_2
 		};
 		
 		respawnWeapons[] = {
@@ -227,7 +227,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			PK_MAGAZINES_4,
-			HAND_GRENADES_TIMED_2
+			HANDGRENADE_2
 		};
 		
 		class Wounds
@@ -265,7 +265,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			RPG7_ROUNDS_3,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -277,7 +277,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			RPG7_ROUNDS_3,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 	};
 	
@@ -301,7 +301,7 @@ class CfgVehicles
 		
 		magazines[] = {
 			AK_MAGAZINES_6,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -313,7 +313,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 	};
 	
@@ -373,7 +373,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -386,7 +386,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
-			DefaultGrenades
+			TDF_DEFAULT_GRENADES
 		};
 	};
 	
@@ -450,7 +450,7 @@ class CfgVehicles
 
         magazines[] = {
             AK_MAGAZINES_6,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
         };
 		
 		respawnWeapons[] = {
@@ -460,7 +460,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
             AK_MAGAZINES_6,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
         };
 		
 		class Wounds
@@ -494,7 +494,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			GP25_GRENADES_8,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -505,7 +505,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			GP25_GRENADES_8,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};	
 	};
 
@@ -542,7 +542,7 @@ class CfgVehicles
 		
 		magazines[] = {
 			M249_MAGAZINES_4,
-			HAND_GRENADES_TIMED_2
+			HANDGRENADE_TIMED_2
 		};
 		
 		respawnWeapons[] = {
@@ -552,7 +552,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			M249_MAGAZINES_4,
-			HAND_GRENADES_TIMED_2
+			HANDGRENADE_TIMED_2
 		};
 		};
 	};
@@ -578,7 +578,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			RPG7_ROUNDS_3,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -590,7 +590,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			RPG7_ROUNDS_3,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 	};
 
@@ -614,7 +614,7 @@ class CfgVehicles
 		
 		magazines[] = {
 			AK_MAGAZINES_6,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -626,7 +626,7 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 	};
 
@@ -686,7 +686,7 @@ class CfgVehicles
 		magazines[] = {
 			AK_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
@@ -699,7 +699,7 @@ class CfgVehicles
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
-			DefaultGrenades
+			LF_DEFAULT_GRENADES
 		};
 	};
 
