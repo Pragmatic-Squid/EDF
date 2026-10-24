@@ -48,6 +48,9 @@
 	"30Rnd_556x45_Stanag", \
 	"30Rnd_556x45_Stanag"
 
+// M4AIM uses standard 5.56 mm STANAG magazines
+#define M4AIM_MAGAZINES_6 STANAG_MAGAZINES_6
+
 #define GP25_GRENADES_8 \
 	"1Rnd_HE_GP25", \
 	"1Rnd_HE_GP25", \
