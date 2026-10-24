@@ -20,7 +20,14 @@ class CfgPatches
 			"AFN_TDF_Sniper",
 			"AFN_TDF_Marksman",
 			"AFN_LF_Rifleman",
-			"AFN_LF_Grenadier"
+			"AFN_LF_Grenadier",
+            "AFN_LF_Medic",
+            "AFN_LF_AutomaticRifleman",
+            "AFN_LF_AntiTank",
+            "AFN_LF_TeamLeader",
+            "AFN_LF_Sniper",
+            "AFN_LF_Marksman",
+            "AFN_LF_Crewman"
         };
 
         weapons[] = {};
@@ -500,6 +507,236 @@ class CfgVehicles
 			GP25_GRENADES_8,
 			DefaultGrenades
 		};	
+	};
+
+    class AFN_LF_Medic : AFN_LF_Rifleman {
+		displayName = "AFN LF Medic";
+		nameSound = "medic2";
+		
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		picture = "\Ca\characters\data\Ico\i_Med_CA.paa";
+		Icon = "\Ca\characters\data\map_ico\i_medyk_CA.paa";
+		
+		accuracy=1000; // never recognized
+		cost = 60000;
+		attendant = true;
+		weaponSlots = WeaponSlotPrimary + WeaponSlotSecondary + 8 * WeaponSlotItem + 2 * WeaponSlotBinocular + WeaponSlotHandGun + 4*WeaponSlotHandGunItem;
+		};
+	};
+
+    class AFN_LF_AutomaticRifleman: AFN_LF_Rifleman
+	{
+		displayName = "AFN LF Automatic Rifleman";
+		nameSound = "machineGunner";
+		
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		accuracy = 1.5;
+		cost = 60000;
+		threat[] = {1, 0.1, 0.8};
+		
+		weapons[] = {
+			"PK",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			PK_MAGAZINES_4,
+			HAND_GRENADES_TIMED_2
+		};
+		
+		respawnWeapons[] = {
+			"PK",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			PK_MAGAZINES_4,
+			HAND_GRENADES_TIMED_2
+		};
+		};
+	};
+
+    class AFN_LF_AntiTank: AFN_LF_Rifleman
+	{
+		displayName = "AFN LF AT Soldier";
+		nameSound = "missileSoldier";
+		
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		accuracy=1.5;
+		cost=150000;
+		nightVision=true;
+		threat[]={1, 0.9, 0.1};
+		
+		weapons[] = {
+			"AK74",
+			"RPG7V",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			AK_MAGAZINES_6,
+			RPG7_ROUNDS_3,
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {
+			"AK74",
+			"RPG7V",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			AK_MAGAZINES_6,
+			RPG7_ROUNDS_3,
+			DefaultGrenades
+		};
+	};
+
+    class AFN_LF_TeamLeader : AFN_LF_Rifleman {
+		displayName = "AFN LF Team Leader";
+		
+		Picture= "\Ca\characters\data\Ico\i_tleader_CA.paa";
+		Icon= "\Ca\characters\data\map_ico\i_lider_CA.paa";
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		accuracy=2.0;
+		cost=600000;
+		nightVision=true;
+		
+		weapons[] = {
+			"AK74",
+			"Binocular",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			AK_MAGAZINES_6,
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {
+			"AK74",
+			"Binocular",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			AK_MAGAZINES_6,
+			DefaultGrenades
+		};
+	};
+
+    class AFN_LF_Sniper : AFN_LF_Rifleman {
+		displayName = "AFN LF Sniper";
+		nameSound="sniper";
+		
+		Picture = "\Ca\characters\data\Ico\i_SF_CA.paa";
+		Icon = "\Ca\characters\data\map_ico\i_wojak_CA.paa";
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		accuracy = 3.5;
+		nightVision = true;
+		cost = 250000;
+		sensitivity = 2;
+		camouflage = 0.6;
+		threat[] = {1, 0.1, 0.1};
+		
+		weapons[] = {
+			"SVD",
+			"Makarov",
+			"Binocular",
+			DefaultEquip
+		};
+			
+		magazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+		
+		respawnWeapons[]={
+			"SVD",
+			"Makarov",
+			"Binocular",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			SVD_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4
+		};
+	};
+
+    class AFN_LF_Marksman : AFN_LF_Rifleman
+	{
+		displayName = "AFN LF Marksman";
+		
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		weapons[] = {
+			"aks74pso",
+			"MakarovSD",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			AK_MAGAZINES_6,
+			MAKAROV_SD_MAGAZINES_4,
+			DefaultGrenades
+		};
+		
+		respawnWeapons[] = {
+			"aks74pso",
+			"MakarovSD",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			AK_MAGAZINES_6,
+			MAKAROV_SD_MAGAZINES_4,
+			DefaultGrenades
+		};
+	};
+
+    class AFN_LF_Crewman : AFN_LF_Rifleman {
+		displayName = "AFN LF Crew";
+		nameSound = "crew";
+		
+		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
+		
+		accuracy = 1000; // never recognize
+		
+
+		weapons[] = {
+			"AKS74U",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		magazines[] = {
+			AK_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4,
+			SMOKE_SHELL_GREEN_2
+		};
+		
+		respawnWeapons[] = {
+			"AKS74U",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
+		};
+		
+		respawnMagazines[] = {
+			AK_MAGAZINES_6,
+			MAKAROV_MAGAZINES_4,
+			SMOKE_SHELL_GREEN_2
+		};
 	};
 };
 
