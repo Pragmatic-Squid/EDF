@@ -12,9 +12,25 @@
 #define public      2
 
 #define DefaultEquip "Throw","Put"
-#define DefaultGrenades "HandGrenade", \
+#define TDF_DEFAULT_GRENADES \
 	"HandGrenade", \
-	"SmokeShell"
+	"HandGrenade", \
+	"SmokeShell", \
+	"SmokeShellRed"
+
+#define LF_DEFAULT_GRENADES \
+	"HandGrenadeTimed", \
+	"HandGrenadeTimed", \
+	"SmokeShell", \
+	"SmokeShellRed"
+
+#define HANDGRENADE_2 \
+	"HandGrenade", \
+	"HandGrenade"
+
+#define HANDGRENADE_TIMED_2 \
+	"HandGrenadeTimed", \
+	"HandGrenadeTimed"
 
 #define AK_MAGAZINES_6 \
 	"30Rnd_545x39_AK", \
@@ -70,10 +86,6 @@
 	"8Rnd_9x18_MakarovSD", \
 	"8Rnd_9x18_MakarovSD", \
 	"8Rnd_9x18_MakarovSD"
-
-#define HAND_GRENADES_TIMED_2 \
-	"HandGrenadeTimed", \
-	"HandGrenadeTimed"
 
 #define SMOKE_SHELL_GREEN_2 \
 	"SmokeShellGreen", \
