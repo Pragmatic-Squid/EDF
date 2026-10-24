@@ -109,7 +109,10 @@ class CfgVehicles
 			DefaultGrenades
         };
 		
-		respawnWeapons[] = {};
+		respawnWeapons[] = {
+            "AK74",
+            DefaultEquip
+        };
 		
 		respawnMagazines[] = {
             AK_MAGAZINES_6,
