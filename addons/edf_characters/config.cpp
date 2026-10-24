@@ -812,7 +812,7 @@ class CfgVehicles
     {
         scope = public;
         vehicleClass = "AFN_SpecialOperationForces";
-        displayName = "AFN SOF Rifleman";
+        displayName = "AFN SOF Operator (M4A1 Aimpoint)";
 
         picture="\Ca\characters\data\Ico\i_null_CA.paa";
         Icon= "\Ca\characters\data\map_ico\i_wojak_CA.paa";
@@ -857,7 +857,7 @@ class CfgVehicles
 
     class AFN_SOF_Rifleman_M4A1SD : AFN_SOF_Rifleman
     {
-        displayName = "AFN SOF Rifleman (M4A1 SD)";
+        displayName = "AFN SOF Operator (M4A1 SD)";
 
         weapons[] = {
             "M4A1SD",
@@ -882,7 +882,7 @@ class CfgVehicles
 
     class AFN_SOF_Rifleman_AKS74UN : AFN_SOF_Rifleman
     {
-        displayName = "AFN SOF Rifleman (AKS-74UN)";
+        displayName = "AFN SOF Operator (AKS-74UN)";
 
         weapons[] = {
             "AKS74UN",
