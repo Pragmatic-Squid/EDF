@@ -1098,26 +1098,26 @@ class CfgVehicles
         threat[] = {1, 0.1, 0.1};
 
         weapons[] = {
-            "SVD",
+            "M24",
             "Makarov",
             "Binocular",
             DefaultEquip
         };
 
         magazines[] = {
-            SVD_MAGAZINES_6,
+            M24_MAGAZINES_6,
             MAKAROV_MAGAZINES_4
         };
 
         respawnWeapons[]={
-            "SVD",
+            "M24",
             "Makarov",
             "Binocular",
             DefaultEquip
         };
 
         respawnMagazines[] = {
-            SVD_MAGAZINES_6,
+            M24_MAGAZINES_6,
             MAKAROV_MAGAZINES_4
         };
     };
