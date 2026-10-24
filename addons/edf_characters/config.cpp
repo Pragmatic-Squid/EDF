@@ -31,6 +31,8 @@ class CfgPatches
             "AFN_LF_Marksman_SVD",
             "AFN_LF_Crewman",
             "AFN_SOF_Rifleman",
+            "AFN_SOF_Rifleman_M4A1SD",
+            "AFN_SOF_Rifleman_AKS74UN",
             "AFN_SOF_Grenadier",
             "AFN_SOF_Medic",
             "AFN_SOF_AutomaticRifleman",
@@ -850,6 +852,56 @@ class CfgVehicles
                 "ca\characters\data\us_soldier_b_body_wound1.rvmat",
                 "ca\characters\data\us_soldier_b_body_wound2.rvmat"
             };
+        };
+    };
+
+    class AFN_SOF_Rifleman_M4A1SD : AFN_SOF_Rifleman
+    {
+        displayName = "AFN SOF Rifleman (M4A1 SD)";
+
+        weapons[] = {
+            "M4A1SD",
+            DefaultEquip
+        };
+
+        magazines[] = {
+            STANAG_SD_MAGAZINES_6,
+            TDF_DEFAULT_GRENADES
+        };
+
+        respawnWeapons[] = {
+            "M4A1SD",
+            DefaultEquip
+        };
+
+        respawnMagazines[] = {
+            STANAG_SD_MAGAZINES_6,
+            TDF_DEFAULT_GRENADES
+        };
+    };
+
+    class AFN_SOF_Rifleman_AKS74UN : AFN_SOF_Rifleman
+    {
+        displayName = "AFN SOF Rifleman (AKS-74UN)";
+
+        weapons[] = {
+            "AKS74UN",
+            DefaultEquip
+        };
+
+        magazines[] = {
+            AK_MAGAZINES_6,
+            TDF_DEFAULT_GRENADES
+        };
+
+        respawnWeapons[] = {
+            "AKS74UN",
+            DefaultEquip
+        };
+
+        respawnMagazines[] = {
+            AK_MAGAZINES_6,
+            TDF_DEFAULT_GRENADES
         };
     };
 
