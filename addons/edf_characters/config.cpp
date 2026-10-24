@@ -677,27 +677,27 @@ class CfgVehicles
 		model = "\\edf_characters\\edf_rf_soldier_b.p3d";
 		
 		weapons[] = {
-			"aks74pso",
+			"M16A4_ACG",
 			"MakarovSD",
 			"NVGoggles",
 			DefaultEquip
 		};
 		
 		magazines[] = {
-			AK_MAGAZINES_6,
+			STANAG_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
 			LF_DEFAULT_GRENADES
 		};
 		
 		respawnWeapons[] = {
-			"aks74pso",
+			"M16A4_ACG",
 			"MakarovSD",
 			"NVGoggles",
 			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
-			AK_MAGAZINES_6,
+			STANAG_MAGAZINES_6,
 			MAKAROV_SD_MAGAZINES_4,
 			LF_DEFAULT_GRENADES
 		};
