@@ -825,7 +825,7 @@ class CfgVehicles
         };
 
         magazines[] = {
-            M4AIM_MAGAZINES_6,
+            STANAG_MAGAZINES_6,
             TDF_DEFAULT_GRENADES
         };
 
@@ -835,7 +835,7 @@ class CfgVehicles
         };
 
         respawnMagazines[] = {
-            M4AIM_MAGAZINES_6,
+            STANAG_MAGAZINES_6,
             TDF_DEFAULT_GRENADES
         };
 
