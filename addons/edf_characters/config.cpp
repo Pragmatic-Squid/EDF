@@ -536,22 +536,22 @@ class CfgVehicles
 		threat[] = {1, 0.1, 0.8};
 		
 		weapons[] = {
-			"PK",
+			"M249",
 			DefaultEquip
 		};
 		
 		magazines[] = {
-			PK_MAGAZINES_4,
+			M249_MAGAZINES_4,
 			HAND_GRENADES_TIMED_2
 		};
 		
 		respawnWeapons[] = {
-			"PK",
+			"M249",
 			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
-			PK_MAGAZINES_4,
+			M249_MAGAZINES_4,
 			HAND_GRENADES_TIMED_2
 		};
 		};
