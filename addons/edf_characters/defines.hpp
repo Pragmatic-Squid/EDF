@@ -48,14 +48,6 @@
 	"30Rnd_556x45_Stanag", \
 	"30Rnd_556x45_Stanag"
 
-#define STANAG_SD_MAGAZINES_6 \
-	"30Rnd_556x45_StanagSD", \
-	"30Rnd_556x45_StanagSD", \
-	"30Rnd_556x45_StanagSD", \
-	"30Rnd_556x45_StanagSD", \
-	"30Rnd_556x45_StanagSD", \
-	"30Rnd_556x45_StanagSD"
-
 #define GP25_GRENADES_8 \
 	"1Rnd_HE_GP25", \
 	"1Rnd_HE_GP25", \
