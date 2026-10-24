@@ -83,6 +83,14 @@
 	"10Rnd_762x54_SVD", \
 	"10Rnd_762x54_SVD"
 
+#define M24_MAGAZINES_6 \
+	"5Rnd_762x51_M24", \
+	"5Rnd_762x51_M24", \
+	"5Rnd_762x51_M24", \
+	"5Rnd_762x51_M24", \
+	"5Rnd_762x51_M24", \
+	"5Rnd_762x51_M24"
+
 #define MAKAROV_MAGAZINES_4 \
 	"8Rnd_9x18_Makarov", \
 	"8Rnd_9x18_Makarov", \
