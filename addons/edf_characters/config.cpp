@@ -36,21 +36,21 @@
 
 class CfgPatches
 {
-    class EDF_Characters
+    class AFN_Characters
     {
         units[] =
         {
-            "EDF_TDF_SoldierB",
-			"EDF_TDF_SoldierMedic",
-			"EDF_TDF_SoldierG",
-			"EDF_TDF_SoldierAR",
-			"EDF_TDF_SoldierAT",
-			"EDF_TDF_TeamLeader",
-			"EDF_TDF_SoldierCrew",
-			"EDF_TDF_Sniper",
-			"EDF_TDF_Marksman",
-			"EDF_RF_SoldierB",
-			"EDF_RF_SoldierG"
+            "AFN_TDF_SoldierB",
+			"AFN_TDF_SoldierMedic",
+			"AFN_TDF_SoldierG",
+			"AFN_TDF_SoldierAR",
+			"AFN_TDF_SoldierAT",
+			"AFN_TDF_TeamLeader",
+			"AFN_TDF_SoldierCrew",
+			"AFN_TDF_Sniper",
+			"AFN_TDF_Marksman",
+			"AFN_LF_SoldierB",
+			"AFN_LF_SoldierG"
         };
 
         weapons[] = {};
@@ -70,9 +70,9 @@ class CfgPatches
 
 class CfgFactionClasses
 {
-    class EDF
+    class AFN
     {
-        displayName = "Everon Defense Forces";
+        displayName = "Armed Forces of Nogova";
         side = West;
     };
 };
@@ -83,16 +83,16 @@ class CfgFactionClasses
 
 class CfgVehicleClasses
 {
-    class EDF_TerritorialDefenseForces {
-        displayName = "EDF Territorial Defense Forces";
+    class AFN_TerritorialDefenseForces {
+        displayName = "AFN Territorial Defense Forces";
     };
 	
-	class EDF_RegularForces {
-			displayName = "EDF Regular Forces";
+	class AFN_LandForces {
+			displayName = "AFN Land Forces";
 	};
 
-    class EDF_SpecialOperationForces {
-        displayName = "EDF Special Operation Forces";
+    class AFN_SpecialOperationForces {
+        displayName = "AFN Special Operation Forces";
     };
 };
 
@@ -104,22 +104,22 @@ class CfgVehicles
 {
     class SoldierWB;
 
-	class EDF_SoldierB : SoldierWB
+	class AFN_SoldierB : SoldierWB
     {
 		scope = protected;
 		side = West;
-		faction = "EDF";
+		faction = "AFN";
     };
 
     // -----------------------------------------------------------------------
     // Territorial Defense Forces
     // -----------------------------------------------------------------------
 
-    class EDF_TDF_SoldierB : EDF_SoldierB
+    class AFN_TDF_SoldierB : AFN_SoldierB
     {
-		scope = public
-		vehicleClass = "EDF_TerritorialDefenseForces";
-		displayName = "EDF TDF Rifleman";
+		scope = public;
+		vehicleClass = "AFN_TerritorialDefenseForces";
+		displayName = "AFN TDF Rifleman";
         
 		picture="\Ca\characters\data\Ico\i_null_CA.paa";
 		Icon= "\Ca\characters\data\map_ico\i_wojak_CA.paa";
@@ -139,14 +139,12 @@ class CfgVehicles
 			DefaultGrenades
         };
 		
-		respawnWeapons[] = {
-            "AK74",
-            DefaultEquip
-		};
+		respawnWeapons[] = {};
 		
 		respawnMagazines[] = {
-			AK_MAGAZINES_6
-		};
+            AK_MAGAZINES_6,
+			DefaultGrenades
+        };
 		
 		class Wounds
 		{
@@ -162,8 +160,8 @@ class CfgVehicles
 		};
     };
 	
-	class EDF_TDF_SoldierG : EDF_TDF_SoldierB {
-		displayName = "EDF TDF Grenadier";
+	class AFN_TDF_SoldierG : AFN_TDF_SoldierB {
+		displayName = "AFN TDF Grenadier";
 		nameSound = "grenadier";
 		
 		model = "\edf_characters\edf_tdf_soldier_g.p3d";
@@ -183,19 +181,19 @@ class CfgVehicles
 		};
 		
 		respawnWeapons[] = {
-            "AK74GL",
-            DefaultEquip
+			"AK74GL",
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25"
+			GP25_GRENADES_8,
+			DefaultGrenades
 		};
 	};
 	
-	class EDF_TDF_SoldierMedic : EDF_TDF_SoldierB {
-		displayName = "EDF TDF Medic";
+	class AFN_TDF_SoldierMedic : AFN_TDF_SoldierB {
+		displayName = "AFN TDF Medic";
 		nameSound = "medic2";
 		
 		model = "\edf_characters\edf_soldier_medic.p3d";
@@ -221,9 +219,9 @@ class CfgVehicles
 		};
 	};
 	
-	class EDF_TDF_SoldierAR: EDF_TDF_SoldierB
+	class AFN_TDF_SoldierAR: AFN_TDF_SoldierB
 	{
-		displayName = "EDF TDF Automatic Rifleman";
+		displayName = "AFN TDF Automatic Rifleman";
 		nameSound = "machineGunner";
 		
 		model = "\edf_characters\edf_tdf_soldier_ar.p3d";
@@ -253,7 +251,11 @@ class CfgVehicles
 		
 		respawnMagazines[] = {
 			"100Rnd_762x54_PK",
-			"100Rnd_762x54_PK"
+			"100Rnd_762x54_PK",
+			"100Rnd_762x54_PK",
+			"100Rnd_762x54_PK",
+			"HandGrenadeTimed",
+			"HandGrenadeTimed"
 		};
 		
 		class Wounds
@@ -270,9 +272,9 @@ class CfgVehicles
 		};
 	};
 	
-	class EDF_TDF_SoldierAT: EDF_TDF_SoldierB
+	class AFN_TDF_SoldierAT: AFN_TDF_SoldierB
 	{
-		displayName = "EDF TDF AT Soldier";
+		displayName = "AFN TDF AT Soldier";
 		nameSound = "missileSoldier";
 		
 		model = "\edf_characters\edf_tdf_soldier_at.p3d";
@@ -303,15 +305,16 @@ class CfgVehicles
 		};
 		
 		respawnMagazines[] = {
-			"30Rnd_545x39_AK",
-			"30Rnd_545x39_AK",
-			"30Rnd_545x39_AK",
-			"PG7V"
+			AK_MAGAZINES_6,
+			"PG7V",
+			"PG7V",
+			"PG7V",
+			DefaultGrenades
 		};
 	};
 	
-	class EDF_TDF_TeamLeader : EDF_TDF_SoldierB {
-		displayName = "EDF TDF Team Leader";
+	class AFN_TDF_TeamLeader : AFN_TDF_SoldierB {
+		displayName = "AFN TDF Team Leader";
 		
 		Picture= "\Ca\characters\data\Ico\i_tleader_CA.paa";
 		Icon= "\Ca\characters\data\map_ico\i_lider_CA.paa";
@@ -337,16 +340,17 @@ class CfgVehicles
 			"AK74",
 			"Binocular",
 			"NVGoggles",
-			DefaultEquip 
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
-			AK_MAGAZINES_6
+			AK_MAGAZINES_6,
+			DefaultGrenades
 		};
 	};
 	
-	class EDF_TDF_Sniper : EDF_TDF_SoldierB {
-		displayName = "EDF TDF Sniper";
+	class AFN_TDF_Sniper : AFN_TDF_SoldierB {
+		displayName = "AFN TDF Sniper";
 		nameSound="sniper";
 		
 		Picture = "\Ca\characters\data\Ico\i_SF_CA.paa";
@@ -382,6 +386,8 @@ class CfgVehicles
 		
 		respawnWeapons[]={
 			"SVD",
+			"Makarov",
+			"Binocular",
 			DefaultEquip
 		};
 		
@@ -389,13 +395,19 @@ class CfgVehicles
 			"10Rnd_762x54_SVD",
 			"10Rnd_762x54_SVD",
 			"10Rnd_762x54_SVD",
-			"10Rnd_762x54_SVD"
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"10Rnd_762x54_SVD",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov",
+			"8Rnd_9x18_Makarov"
 		};
 	};
 	
-	class EDF_TDF_Marksman : EDF_TDF_SoldierB
+	class AFN_TDF_Marksman : AFN_TDF_SoldierB
 	{
-		displayName = "EDF TDF Marksman";
+		displayName = "AFN TDF Marksman";
 		
 		model = "\edf_characters\edf_tdf_soldier.p3d";
 		
@@ -417,16 +429,23 @@ class CfgVehicles
 		
 		respawnWeapons[] = {
 			"aks74pso",
+			"MakarovSD",
+			"NVGoggles",
 			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
-			AK_MAGAZINES_6
+			AK_MAGAZINES_6,
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			"8Rnd_9x18_MakarovSD",
+			DefaultGrenades
 		};
 	};
 	
-	class EDF_TDF_SoldierCrew : EDF_TDF_SoldierB {
-		displayName = "EDF TDF Crew";
+	class AFN_TDF_SoldierCrew : AFN_TDF_SoldierB {
+		displayName = "AFN TDF Crew";
 		nameSound = "crew";
 		
 		model = "\edf_characters\edf_tdf_soldier.p3d";
@@ -452,25 +471,31 @@ class CfgVehicles
 		};
 		
 		respawnWeapons[] = {
-			"Makarov",DefaultEquip
+			"AKS74U",
+			"Makarov",
+			"NVGoggles",
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
+			AK_MAGAZINES_6,
 			"8Rnd_9x18_Makarov",
 			"8Rnd_9x18_Makarov",
 			"8Rnd_9x18_Makarov",
-			"8Rnd_9x18_Makarov"
+			"8Rnd_9x18_Makarov",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
 		};
 	};
 		
     // -----------------------------------------------------------------------
-    // Regular Forces
+    // Land Forces
     // -----------------------------------------------------------------------
 	
-	 class EDF_RF_SoldierB : EDF_SoldierB
+	 class AFN_LF_SoldierB : AFN_SoldierB
     {
-		vehicleClass = "EDF_RegularForces";
-		displayName = "EDF RF Rifleman";
+		vehicleClass = "AFN_LandForces";
+		displayName = "AFN LF Rifleman";
         
 		picture="\Ca\characters\data\Ico\i_null_CA.paa";
 		Icon= "\Ca\characters\data\map_ico\i_wojak_CA.paa";
@@ -493,11 +518,12 @@ class CfgVehicles
 		respawnWeapons[] = {
             "AK74",
             DefaultEquip
-		};
+        };
 		
 		respawnMagazines[] = {
-			AK_MAGAZINES_6
-		};
+            AK_MAGAZINES_6,
+			DefaultGrenades
+        };
 		
 		class Wounds
 		{
@@ -513,8 +539,8 @@ class CfgVehicles
 		};
     };
 	
-	class EDF_RF_SoldierG : EDF_RF_SoldierB {
-		displayName = "EDF RF Grenadier";
+	class AFN_LF_SoldierG : AFN_LF_SoldierB {
+		displayName = "AFN LF Grenadier";
 		nameSound = "grenadier";
 		
 		model = "\edf_characters\edf_rf_soldier_g.p3d";
@@ -534,14 +560,14 @@ class CfgVehicles
 		};
 		
 		respawnWeapons[] = {
-            "AK74GL",
-            DefaultEquip
+			"AK74GL",
+			DefaultEquip
 		};
 		
 		respawnMagazines[] = {
 			AK_MAGAZINES_6,
-			"1Rnd_HE_GP25",
-			"1Rnd_HE_GP25"
+			GP25_GRENADES_8,
+			DefaultGrenades
 		};	
 	};
 };
@@ -550,50 +576,50 @@ class CfgGroups {
     class West {
         name = "BLUFOR";
 
-        class EDF_TD {
-            name = "EDF Territorial Defense";
+        class AFN_TD {
+            name = "AFN Territorial Defense";
 
-            class EDF_TDF_RifleSquad {
+            class AFN_TDF_RifleSquad {
                 name = "TD RifleSquad";
 
 				class Unit0 {
 					side = 1;
-					vehicle = "EDF_TDF_TeamLeader";
+					vehicle = "AFN_TDF_TeamLeader";
 					rank = "SERGEANT";
 					position[] = {0, 0, 0};
 				};
 
 				class Unit1 {
 					side = 1;
-					vehicle = "EDF_TDF_SoldierB";
+					vehicle = "AFN_TDF_SoldierB";
 					rank = "PRIVATE";
 					position[] = {5, -5, 0};
 				};
 
 				class Unit2 {
 					side = 1;
-					vehicle = "EDF_TDF_SoldierG";
+					vehicle = "AFN_TDF_SoldierG";
 					rank = "PRIVATE";
 					position[] = {-5, -5, 0};
 				};
 
 				class Unit3 {
 					side = 1;
-					vehicle = "EDF_TDF_SoldierAR";
+					vehicle = "AFN_TDF_SoldierAR";
 					rank = "CORPORAL";
 					position[] = {10, -10, 0};
 				};
 
 				class Unit4 {
 					side = 1;
-					vehicle = "EDF_TDF_SoldierB";
+					vehicle = "AFN_TDF_SoldierB";
 					rank = "PRIVATE";
 					position[] = {-10, -10, 0};
 				};
 
 				class Unit5 {
 					side = 1;
-					vehicle = "EDF_TDF_SoldierAT";
+					vehicle = "AFN_TDF_SoldierAT";
 					rank = "PRIVATE";
 					position[] = {15, -15, 0};
 				};
