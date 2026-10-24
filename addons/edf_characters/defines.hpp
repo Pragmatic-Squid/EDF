@@ -40,6 +40,14 @@
 	"30Rnd_545x39_AK", \
 	"30Rnd_545x39_AK"
 	
+#define STANAG_MAGAZINES_6 \
+	"30Rnd_556x45_Stanag", \
+	"30Rnd_556x45_Stanag", \
+	"30Rnd_556x45_Stanag", \
+	"30Rnd_556x45_Stanag", \
+	"30Rnd_556x45_Stanag", \
+	"30Rnd_556x45_Stanag"
+
 #define GP25_GRENADES_8 \
 	"1Rnd_HE_GP25", \
 	"1Rnd_HE_GP25", \
