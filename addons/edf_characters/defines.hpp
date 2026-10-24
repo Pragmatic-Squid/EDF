@@ -40,6 +40,12 @@
 	"100Rnd_762x54_PK", \
 	"100Rnd_762x54_PK"
 
+#define M249_MAGAZINES_4 \
+	"200Rnd_556x45_M249", \
+	"200Rnd_556x45_M249", \
+	"200Rnd_556x45_M249", \
+	"200Rnd_556x45_M249"
+
 #define RPG7_ROUNDS_3 \
 	"PG7V", \
 	"PG7V", \
